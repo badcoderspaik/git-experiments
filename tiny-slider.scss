@@ -1,0 +1,38 @@
+.tinymenu {
+  & ul {
+    overflow: hidden;
+    transition: height .5s;
+  }
+}
+
+.tm {
+
+  &-collapsed {
+    height: 0;
+  }
+
+  &-has-arrow {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: .5em;
+      height: .5em;
+      border: 1px solid currentColor;
+      border-right-width: 0;
+      border-bottom-width: 0;
+      right: 1em;
+      transform: rotate(-45deg) translateY(-50%);
+      transform-origin: top;
+      top: 50%;
+      transition: all .3s ease-out;
+    }
+  }
+
+  &-active {
+    &::before {
+      transform: rotate(-135deg) translateY(-50%);
+    }
+  }
+}

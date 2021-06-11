@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Height animate</title>
+  <link rel="stylesheet" href="tiny-slider.css">
+  <style>
+    body {
+      background: #000000 url(bg.jpg) 0 0 no-repeat;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    a {
+      font-size: 16px;
+      padding: 10px;
+      border: 1px solid #fff;
+      border-top: 0;
+      display: block;
+      min-width: 120px;
+      color: #ffb865;
+      background: #000;
+    }
+
+    a.list__link_level-2 {
+      background: #353535;
+    }
+
+    a.list__link_level-3 {
+      background: #4C4C4C;
+    }
+
+    .list {
+      margin: 0;
+      list-style: none;
+      padding: 0;
+    }
+
+    .list_level-1 {
+      display: flex;
+    }
+
+    .list__item_level-1 {
+      position: relative;
+    }
+
+    .list_level-2 {
+      position: absolute;
+      left: 0;
+      top: 100%;
+    }
+  </style>
+</head>
+<body>
+<ul class="tinymenu list list_level-1">
+  <li class="list__item list__item_level-1">
+    <a class="list__link list__link_level-1" href="#">Главная</a>
+    <ul class="list list_level-2">
+
+      <li class="list__item list__item_level-2">
+        <a href="#" class="list__link list__link_level-2">Один</a>
+        <ul class="list list_level-3">
+
+          <li class="list__item list__item_level-3">
+            <a href="#" class="list__link list__link_level-3">Два</a>
+            <ul class="list list_level-4">
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+            </ul>
+          </li>
+
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+        </ul>
+      </li>
+
+      <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Один</a></li>
+      <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Один</a></li>
+      <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Один</a></li>
+      <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Один</a></li>
+    </ul>
+  </li>
+  <li class="list__item list__item_level-1">
+    <a class="list__link list__link_level-1" href="#">Главная</a>
+    <ul class="list list_level-2">
+
+      <li class="list__item list__item_level-2">
+        <a href="#" class="list__link list__link_level-2">Один</a>
+        <ul class="list list_level-3">
+
+          <li class="list__item list__item_level-3">
+            <a href="#" class="list__link list__link_level-3">Два</a>
+            <ul class="list list_level-4">
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+              <li class="list__item list__item_level-3"><a href="#" class="list__link list__link_level-3">Три</a></li>
+            </ul>
+          </li>
+
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+          <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Два</a></li>
+        </ul>
+      </li>
+
+      <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Один</a></li>
+      <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Один</a></li>
+      <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Один</a></li>
+      <li class="list__item list__item_level-2"><a href="#" class="list__link list__link_level-2">Один</a></li>
+    </ul>
+  </li>
+</ul>
+
+<div>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid, distinctio doloribus eaque
+    eius et fugiat hic incidunt laudantium magnam quae quia tempora totam ullam velit veniam vero voluptas.
+  </p>
+</div>
+
+<script>
+  const tinyMenu = document.querySelector('.tinymenu');
+  const links = tinyMenu.querySelectorAll('a');
+  let active = false;
+
+  function transitionEnd(event) {
+    event.stopPropagation();
+    // const parentList = this.parentElement.parentElement;
+    // const listHeight = parentList.scrollHeight;
+    //
+    // if (this.classList.contains('expanded')) {
+    //   parentList.style.height = `${listHeight}px`;
+    // }
+    active = false;
+  }
+
+  function setListsHeight(el, height, mode) {
+    while (el && el.parentElement) {
+      el = el.parentElement;
+      if (el && el.classList.contains('list')) {
+        const currentHeight = parseInt(el.style.height);
+        if (mode === 'add') {
+          el.style.height = `${currentHeight + height}px`;
+        } else if (mode === 'remove') {
+          el.style.height = `${currentHeight - height}px`;
+        }
+      }
+    }
+  }
+
+  links.forEach(link => {
+    const list = link.nextElementSibling;
+    if (list) {
+      link.classList.add('tm-has-arrow');
+      list.classList.add('tm-collapsed');
+
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        list.addEventListener('transitionend', transitionEnd, false);
+
+        if (!active) {
+          const height = list.scrollHeight;
+          if (list.classList.contains('tm-collapsed')) {
+            list.style.height = `${height}px`;
+            list.classList.remove('tm-collapsed');
+            list.classList.add('tm-expanded');
+            this.classList.add('tm-active');
+            // const parentList = list.parentElement.parentElement;
+            // parentList.style.height = 'auto';
+            setListsHeight(list, height, 'add');
+          } else if (list.classList.contains('tm-expanded')) {
+            list.classList.remove('tm-expanded');
+            list.classList.add('tm-collapsed');
+            this.classList.remove('tm-active');
+            setListsHeight(list, height, 'remove');
+            list.style.height = '0px';
+          }
+        }
+
+        active = true;
+
+      }, false);
+    }
+
+  });
+</script>
+
+</body>
+</html>

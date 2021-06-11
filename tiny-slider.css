@@ -1,0 +1,25 @@
+.tinymenu ul {
+  overflow: hidden;
+  transition: height .5s; }
+
+.tm-collapsed {
+  height: 0; }
+.tm-has-arrow {
+  position: relative; }
+  .tm-has-arrow::before {
+    position: absolute;
+    content: "";
+    width: .5em;
+    height: .5em;
+    border: 1px solid currentColor;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    right: 1em;
+    transform: rotate(-45deg) translateY(-50%);
+    transform-origin: top;
+    top: 50%;
+    transition: all .3s ease-out; }
+.tm-active::before {
+  transform: rotate(-135deg) translateY(-50%); }
+
+/*# sourceMappingURL=tiny-slider.css.map */
